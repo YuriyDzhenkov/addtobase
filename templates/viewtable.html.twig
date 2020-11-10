@@ -1,0 +1,18 @@
+{% extends 'user.html.twig' %}
+{% block body %}
+    <h1>
+Список товара на складе
+
+    </h1>
+    <ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }}, {{ product.quantity }}
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{{ path('home_page') }}"><br>
+        На главную
+    </a>
+
+{% endblock %}
